@@ -1,0 +1,546 @@
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+         <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+ 
+ 
+  <link rel="stylesheet" href="style.css">
+  
+  
+
+
+<style type="text/css">
+      .hide{
+        display: none}
+  </style>
+    </head>
+    <body><i class="fas fa-shopping-cart"></i>
+    <button  type="button" class="btn btn-success" id="cart-icon">Show Cart</button>
+    <div id="cart-show" class="hide" > 
+        <button type="button" class="mt-3 mb-3 btn btn-warning" id="clear-cart">Clear Cart</button>
+        <button id="reload-cart" class="mt-3 mb-3 btn btn-info hide">Reload Cart</button>
+
+
+ <!--display of cart--> 
+         <div class="shopping-cart">
+
+            <div class="row"> 
+                <div class="col-lg-8  col-md-12 col-sm-12 mt-5"  id="show-cart">
+                    
+                </div> 
+                <div class="col-lg-4 col-md-12 col-sm-12" id="show-total">
+                     <div class="totals">
+          
+          </div>
+            </div>
+         </div>
+     </div>
+    </div>
+
+ <!--display of cart ends--> 
+
+ <!-- Listing of all items in stock starts--> 
+<div class="row" id="displayItems">
+        <!-- Listing of single item  begins--> 
+      <div class="col-10 mx-auto col-sm-6 col-lg-3 my-3 danger" >
+         <div class="card " >
+             <div class="card-header bg-dark">
+              <div class="row d-flex justify-content-between">
+                <div class="col">
+                  <h5 class="display-5 text-center text-light">Item1</h5>
+
+                </div>
+                
+              </div>
+               
+             </div>
+             <div class="card-body" >
+               <div class="row">
+                 <img class="col card-img-top img-fluid w-50" style="height: 50%"  src="https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                     <div class="col p-2 " style="float:left">
+                         <strong class="p-2 ">Price:</strong> $200<br>
+                         <strong class="p-2">Discount:</strong>10%<br>
+                        <strong class="p-2">Type:</strong> Fiction
+                     </div>
+
+               </div>
+               
+               
+             
+             </div>
+             <div class="card-footer">
+
+                <a class="add-to-cart btn btn-primary text-center w-100"  href="#" data-type="fiction" data-name="Item1"data-discount="10"   data-price="250"><i class="fas fa-shopping-cart"></i>Add To Cart</a>
+             
+             </div>
+           </div> </div>
+             <div class="col-10 mx-auto col-sm-6 col-lg-3 my-3 danger" >
+                <div class="card " >
+                 <div class="card-header bg-dark">
+                  <div class="row d-flex justify-content-between">
+                    <div class="col">
+                      <h5 class="display-5 text-center text-light">Item2</h5>
+
+                    </div>
+                   
+                  </div>
+                   
+             </div>
+             <div class="card-body" >
+               <div class="row " >
+                  <img class="col card-img-top img-fluid w-50"style="height: 50%"   src="https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                     <div class="col p-2 " style="float:left">
+                         <strong class="p-2 ">Price:</strong> $250<br>
+                         <strong class="p-2">Discount:</strong>15%<br>
+                        <strong class="p-2">Type:</strong> Literature
+                     </div>
+               </div>
+               
+             </div>
+             <div class="card-footer">
+                <a class="add-to-cart btn btn-primary text-center w-100" href="#" data-type="literature" data-name="Item2"data-discount="10"   data-price="250"><i class="fas fa-shopping-cart"></i>Add ToCart</a></li>
+              
+             </div>
+           </div> </div>
+             <!-- Listing of single item  ends--> 
+               <!-- Listing of single item  begins--> 
+             <div class="col-10 mx-auto col-sm-6 col-lg-3 my-3 danger" >
+             <div class="card " >
+                 <div class="card-header bg-dark">
+                  <div class="row d-flex justify-content-between">
+                    <div class="col">
+                      <h5 class="display-5 text-center text-light">Item3</h5>
+
+                    </div>
+                   
+                  </div>
+               
+             </div>
+             <div class="card-body" >
+               <div class="row " >
+                 <img class="col card-img-top img-fluid w-50" style="height: 50%"  src="https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                     <div class="col p-2 " style="float:left">
+                         <strong class="p-2 ">Price:</strong> $320<br>
+                         <strong class="p-2">Discount:</strong>5%<br>
+                        <strong class="p-2">Type:</strong> Literature
+                     </div>
+               </div>
+              
+             </div>
+             <div class="card-footer">
+                <a class="add-to-cart btn btn-primary text-center w-100" href="#" data-type="literature" data-name="Item3" data-discount="10"  data-price="320"><i class="fas fa-shopping-cart"></i>Add To Cart</a>
+               
+             </div>
+           </div> </div>
+             <!-- Listing of single item  ends--> 
+               <!-- Listing of single item  begins--> 
+             <div class="col-10 mx-auto col-sm-6 col-lg-3 my-3 danger" >
+             <div class="card " >
+                 <div class="card-header bg-dark">
+                  <div class="row d-flex justify-content-between">
+                    <div class="col">
+                      <h5 class="display-5 text-center text-light">Item4</h5>
+
+                </div>
+                
+              </div>
+               
+             </div>
+             <div class="card-body" >
+               <div class="row " >
+                 <img class="col card-img-top img-fluid w-50" style="height: 50%"  src="https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                     <div class="col p-2 " style="float:left">
+                         <strong class="p-2 ">Price:</strong> $290<br>
+                         <strong class="p-2">Discount:</strong>0%<br>
+                        <strong class="p-2">Type:</strong> Thriller
+                     </div>
+               </div>
+              
+             </div>
+             <div class="card-footer">
+                <a class="add-to-cart btn btn-primary text-center w-100" href="#" data-type="thriller" data-name="Item4" data-discount="10"  data-price="290"><i class="fas fa-shopping-cart"></i>Add To Cart</a>
+               
+             </div>
+           </div> </div>
+             <div class="col-10 mx-auto col-sm-6 col-lg-3 my-3 danger" >
+         <div class="card " >
+             <div class="card-header bg-dark">
+              <div class="row d-flex justify-content-between">
+                <div class="col">
+                  <h5 class="dispaly-5 text-center text-light">Item5</h5>
+
+                </div>
+                
+              </div>
+               
+             </div>
+             <div class="card-body" >
+               <div class="row " >
+                 <img class="col card-img-top img-fluid w-50" style="height: 50%"  src="https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                     <div class="col p-2 " style="float:left">
+                         <strong class="p-2 ">Price:</strong> $500<br>
+                         <strong class="p-2">Discount:</strong>25%<br>
+                        <strong class="p-2">Type:</strong> Thriller
+                     </div>
+               </div>
+               
+             </div>
+             <div class="card-footer">
+                <a class="add-to-cart btn btn-primary text-center w-100" href="#" data-type="thriller" data-name="Item5" data-discount="10"  data-price="500"><i class="fas fa-shopping-cart"></i>Add to Cart</a>
+             
+             </div>
+           </div> </div>
+             <!-- Listing of single item  ends--> 
+               <!-- Listing of single item  begins--> 
+             <div class="col-10 mx-auto col-sm-6 col-lg-3 my-3 danger" >
+             <div class="card " >
+                 <div class="card-header bg-dark">
+                  <div class="row d-flex justify-content-between">
+                    <div class="col">
+                      <h5 class="text-center display-5 text-light">Item6</h5>
+
+                    </div>
+                   
+                  </div>
+               
+             </div>
+             <div class="card-body" >
+               <div class="row " >
+                <img class="col card-img-top img-fluid w-50" style="height: 50%" src="https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                     <div class="col p-2 " style="float:left">
+                         <strong class="p-2 ">Price:</strong> $150<br>
+                         <strong class="p-2">Discount:</strong>5%<br>
+                        <strong class="p-2">Type:</strong> Literature
+                     </div>
+               </div>
+               
+             </div>
+             <div class="card-footer">
+                <a class="add-to-cart btn btn-primary text-center w-100" href="#" data-type="literature" data-name="Item6" data-discount="10"  data-price="150"><i class="fas fa-shopping-cart"></i>Add To Cart</a>
+
+              
+             </div>
+           </div> </div>
+             <!-- Listing of single item  ends--> 
+               <!-- Listing of single item  begins--> 
+             <div class="col-10 mx-auto col-sm-6 col-lg-3 my-3 danger" >
+         <div class="card " >
+             <div class="card-header bg-dark">
+              <div class="row d-flex justify-content-between">
+                <div class="col">
+                  <h5 class="text-center display-5 text-light">Item7</h5>
+
+                </div>
+              
+              </div>
+               
+             </div>
+             <div class="card-body" >
+               <div class="row " >
+                  <img class="col card-img-top img-fluid w-50" style="height:10%" src="https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                     <div class="col p-2 " style="float:left">
+                         <strong class="p-2 ">Price:</strong> $700<br>
+                         <strong class="p-2">Discount:</strong>22%<br>
+                        <strong class="p-2">Type:</strong> Literature
+                     </div>
+
+               </div>
+               
+             </div>
+             <div class="card-footer">
+                <a class="add-to-cart btn btn-primary text-center w-100"   href="#" data-type="literature" data-name="Item7" data-discount="10"  data-price="700"><i class="fas fa-shopping-cart"></i>Add To Cart</a>
+               
+
+             </div>
+           </div> </div>
+          <!-- Listing of single item  ends--> 
+            <!-- Listing of single item  begins--> 
+    <div class="col-10 mx-auto col-sm-6 col-lg-3 my-3 danger" >
+        <div class="card " >
+             <div class="card-header bg-dark">
+              <div class="row d-flex justify-content-between">
+                <div class="col">
+                  <h5 class="text-center display-5 text-light">Item8</h5>
+
+                </div>
+               
+              </div>
+               
+             </div>
+
+             <div class="card-body" >
+               <div class="row " >
+                  <img class="col card-img-top img-fluid w-50"  style="height: 50%"  src="https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                     <div class="col p-2 " style="float:left">
+                         <strong class="p-2 ">Price:</strong> $350<br>
+                         <strong class="p-2">Discount:</strong>18%<br>
+                        <strong class="p-2">Type:</strong> fiction
+                     </div>
+               </div>
+              
+             </div>
+             <div class="card-footer">
+                <a class="add-to-cart btn btn-primary text-center w-100" href="#" data-type="fiction" data-name="Item8" data-discount="10"  data-price="350">Add To Cart</a>
+              
+             </div>
+           </div> 
+          
+       </div>
+         <!-- Listing of single item  ends--> 
+
+</div>
+
+ <!-- Listing of all items in stock ends--> 
+
+ <!-- Modal popup  on delete item --> 
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       Your Item has been successfully removed
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- Modal popup  on delete item ends --> 
+
+
+
+        <script src="script.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                /*If cart is empty on page reload a cart reload button will be shown*/
+                 if( window.localStorage.length==0 ) {
+                        $('.add-to-cart').each(function(){
+                console.log($(this).data('name'));
+
+                var name = $(this).data('name');
+                var price = Number($(this).data('price'));
+                var discount = Number($(this).data('discount'));
+                 var type = $(this).data('type');
+
+                shoppingCart.addItemToCart(name, price, discount,1,type);
+                displayCart();
+                // Here ----^^^^^^^
+            });
+               
+                       
+                  }
+             
+                if(JSON.parse(window.localStorage.shoppingCart).length===0){
+                    $("#reload-cart").removeClass('hide')
+                    
+
+                }
+                else{
+
+                     $("#reload-cart").addClass('hide')
+                }
+
+
+                
+            });
+
+
+            
+               
+          
+
+
+
+            $(".add-to-cart").click(function(event){
+                event.preventDefault();
+                var name = $(this).attr("data-name");
+                var price = Number($(this).attr("data-price"));
+                var discount = Number($(this).attr("data-discount"));
+                 var type = $(this).attr("data-type");
+
+                shoppingCart.addItemToCart(name, price, discount,1,type);
+                displayCart();
+            });
+
+            $("#clear-cart").click(function(event){
+                shoppingCart.clearCart();
+                displayCart();
+            });
+
+             $("#cart-icon").click(function(event){
+                console.log('helo')
+                console.log($('#cart-show'))
+                    $(this).text($(this).text() == 'Show Cart' ? 'Hide Cart' : 'Show Cart')
+               $('#cart-show').toggleClass("hide")
+                 $('#displayItems').toggleClass("hide")
+            
+               
+            });
+
+             $("#reload-cart").click(function(event){
+                $('.add-to-cart').each(function(){
+                console.log($(this).data('name'));
+
+                var name = $(this).data('name');
+                var price = Number($(this).data('price'));
+                var discount = Number($(this).data('discount'));
+                 var type = $(this).data('type');
+
+                shoppingCart.addItemToCart(name, price, discount,1,type);
+                displayCart();
+                 $("#reload-cart").addClass('hide')
+            });})
+
+              
+
+            function displayCart() {
+                var cartArray = shoppingCart.listCart();
+                console.log(cartArray);
+                var info = document.getElementById('item');
+                var output=""
+
+                for (var i in cartArray) {
+                output+=` <div class="product mt-3 text-left" data-type=${cartArray[i].type} data-name=${cartArray[i].name} data-discount=${cartArray[i].discount} data-price=${cartArray[i].price}>
+    <div class="product-image col-lg-2 col-md-2 col-sm-4">
+     <button id="myBtn" style="color:white" class="m-2 bt bg-danger font-weight-bold delete-item" data-toggle="modal" data-target="#exampleModalLong" data-name=
+                        ${cartArray[i].name}> <span class="glyphicon glyphicon-remove"></span>   </button>
+      <img class="img-fluid w-50 h-50"src="img1"> 
+    </div>
+    <div class="product-details col-lg-3 col-md-4 col-sm-6">
+      <div class="product-title">${cartArray[i].name}</div>
+      <p class="product-description"><strong>Type:</strong>${cartArray[i].type}  </p>
+    </div>
+
+    <div class="product-price col-lg-3 col-md-2 col-sm-2">${cartArray[i].price}     </div>
+
+    <div class=" product-quantity col-lg-6 col-md-4 col-sm-6">
+ 
+        <div class=" input-group">
+          <span class="input-group-btn">
+              <button type="button" class="subtract-item btn btn-warning btn-number"  data-name=${cartArray[i].name} data-type="minus" data-field="quant[2]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[2]" class="item-count form-control input-number"  min="1" max="100" data-name=
+                        ${cartArray[i].name}
+                         value=${cartArray[i].count}>
+          <span class="input-group-btn">
+              <button type="button" class="plus-item btn btn-success btn-number" data-name=${cartArray[i].name} data-type="plus" data-field="quant[2]" >
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+          
+       </div>
+   </div>
+
+    
+    <div class="product-line-price "><strong>Item Total:</strong><br>${cartArray[i].total }  </div>
+    
+     
+                        
+    </div>
+     
+   
+  </div>`
+                   
+                }
+            
+                $("#show-cart").html(output);
+                $("#count-cart").html( shoppingCart.countCart() );
+                $("#mrp-cart").html( shoppingCart.totalMrpCost() );
+                
+                $("#discount-cart").html( shoppingCart.discountCart() );
+                $("#type-cart").html( shoppingCart.typeDiscount() );
+                $("#total-cart").html( shoppingCart.totalCart() );
+                var totDisplay=document.getElementById('show-total');
+                var totalDisplay="";
+                            totalDisplay+=`   <div class="totals">
+                <div class="totals-item">
+                  <label>Items(${shoppingCart.countCart()}):</label>
+                  <div class="totals-value" id="cart-subtotal">${shoppingCart.totalMrpCost()}</div>
+                </div>
+                <div class="totals-item">
+                  <label>Discount :</label>
+                  <div class="totals-value" id="cart-tax">${shoppingCart.discountCart()}</div>
+                </div>
+                <div class="totals-item">
+                  <label>Type Discount:</label>
+                  <label>(Extra 15% Off for Fiction Category)</label>
+                  <div class="totals-value" id="cart-shipping">${shoppingCart.typeDiscount()}</div>
+                </div>
+                <div class="totals-item totals-item-total">
+                  <label>Order Total:</label>
+                  <div class="totals-value" id="cart-total">${shoppingCart.totalCart()}</div>
+                </div>
+              </div>`
+               totDisplay.innerHTML=totalDisplay
+            }
+
+           
+
+            $("#show-cart").on("click", ".delete-item", function(event){
+                
+                var name = $(this).attr("data-name");
+
+                shoppingCart.removeItemFromCartAll(name);
+                displayCart();
+            });
+
+            $("#show-cart").on("click", ".subtract-item", function(event){
+                var name = $(this).attr("data-name");
+                shoppingCart.removeItemFromCart(name);
+                displayCart();
+            });
+
+            $("#show-cart").on("click", ".plus-item", function(event){
+                var name = $(this).attr("data-name");
+                shoppingCart.addItemToCart(name, 0,0, 1);
+                displayCart();
+            });
+
+
+            $("#show-cart").on("change", ".item-count", function(event){
+                var name = $(this).attr("data-name");
+                var count = Number($(this).val());
+                shoppingCart.setCountForItem(name, count);
+                displayCart();
+            });
+
+
+            displayCart();
+
+        </script>
+    </body>
+</html>
+
+
+
+
